@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
       {
         question: "A very useful tool used during development and debugging for printing content to the debugger is:",
         choices: ["JavaScript", "Terminal/bash", "For loops", "Console log"],
-        answer: 3
-      },
+        answer: 4
+      }
       // Add more questions as needed
     ];
   
@@ -62,6 +62,8 @@ document.addEventListener("DOMContentLoaded", function() {
       for (var i = 0; i < choiceButtons.length; i++) {
         choiceButtons[i].textContent = currentQuestion.choices[i];
         choiceButtons[i].addEventListener("click", checkAnswer);
+        choiceButtons[i].classList.remove("correct", "incorrect");
+        choiceButtons[i].disabled = false; // Enable choice buttons
       }
     }
   
@@ -71,17 +73,27 @@ document.addEventListener("DOMContentLoaded", function() {
       var currentQuestion = questions[currentQuestionIndex];
       if (selectedChoiceIndex === currentQuestion.answer) {
         score++;
+        event.target.classList.add("correct");
       } else {
         timeLeft -= 10; // Deduct 10 seconds for incorrect answer
         if (timeLeft < 0) {
           timeLeft = 0;
         }
+        event.target.classList.add("incorrect");
       }
+      disableChoiceButtons();
       currentQuestionIndex++;
       if (currentQuestionIndex === questions.length) {
         endQuiz();
       } else {
-        showQuestion();
+        setTimeout(showQuestion, 1000);
+      }
+    }
+  
+    // Function to disable choice buttons temporarily
+    function disableChoiceButtons() {
+      for (var i = 0; i < choiceButtons.length; i++) {
+        choiceButtons[i].disabled = true;
       }
     }
   
@@ -113,5 +125,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }, 1000);
     }
   });
+  
   
   
