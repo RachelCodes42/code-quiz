@@ -6,15 +6,6 @@ The Coding Quiz is a web application developed for any coders to assess their Ja
 
 Thank you for using the Coding Quiz! We value your feedback and suggestions.
 
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-
 ## Installation
 
 To use the application, follow these steps:
@@ -45,7 +36,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-This portfolio viewer project was created by Rachel Hochman as part of UCF Bootcamp. The project was developed based on the requirements and user story provided. I would like to acknowledge the following resources that were used during the development of this project: https://www.w3schools.com/ 
+This portfolio viewer project was created by Rachel Hochman. The project was developed based on the requirements and user story provided. I would like to acknowledge the following resources that were used during the development of this project: https://www.w3schools.com/ 
 
 ## License
 
@@ -64,7 +55,3 @@ JavaScript
 ## How to Contribute
 
 Contributions are welcome! If you have any suggestions, improvements, or bug fixes, please open an issue or submit a pull request.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
