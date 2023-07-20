@@ -4,7 +4,7 @@
 
 The Coding Quiz is a web application developed for any coders to assess their JavaScript knowledge through a timed quiz. It offers a user-friendly interface and features a high score functionality for comparing progress with peers. The quiz was created to motivate peers to improve their skills in a competitive and engaging environment. Using HTML, CSS, and JavaScript, the application presents questions one by one, deducts time for incorrect answers, and allows users to save their scores. The Coding Quiz aims to support colleagues in their learning journey and foster healthy competition among peers.
 
-Thank you for using the Coding Quiz! We value your feedback and suggestions.
+Thank you for using the Coding Quiz! I value your feedback and suggestions.
 
 ## Installation
 
