@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var selectedChoiceIndex = Array.from(choiceButtons).indexOf(event.target);
       var currentQuestion = questions[currentQuestionIndex];
       if (selectedChoiceIndex === currentQuestion.answer) {
-        score++;
+        score+= (100/questions.length);
         event.target.classList.add("correct");
       } else {
         timeLeft -= 10; // Deduct 10 seconds for incorrect answer
@@ -118,6 +118,40 @@ document.addEventListener("DOMContentLoaded", function() {
       timerId = setInterval(function() {
         timeLeft--;
         timerElement.textContent = timeLeft;
+        if (timeLeft <= 0) {
+          clearInterval(timerId);
+          endQuiz();
+        }
+      }, 1000);
+    }
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    // ... Existing code ...
+  
+    // Function to start the quiz
+    function startQuiz() {
+      startButton.style.display = "none";
+      questionContainer.style.display = "block";
+      showQuestion();
+      startTimer();
+    }
+  
+    // ... Existing code ...
+  
+    // Function to end the quiz
+    function endQuiz() {
+      clearInterval(timerId);
+      questionContainer.style.display = "none";
+      endContainer.style.display = "block";
+      scoreElement.textContent = score;
+      scoreForm.addEventListener("submit", saveScore);
+    }
+  
+    // Function to start the timer
+    function startTimer() {
+      timerId = setInterval(function () {
+        timeLeft--;
+        timerElement.textContent = `Time: ${timeLeft}`; // Update the timer display
         if (timeLeft <= 0) {
           clearInterval(timerId);
           endQuiz();
