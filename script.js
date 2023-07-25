@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Variables
     var startButton = document.getElementById("start-button");
+    var highScores = document.getElementById("scores");
     var questionContainer = document.getElementById("question-container");
     var endContainer = document.getElementById("end-container");
     var questionElement = document.getElementById("question");
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var score = 0;
     var timeLeft = 60;
     var timerId;
+    var initials;
   
     // Questions and answers
     var questions = [
@@ -46,6 +48,11 @@ document.addEventListener("DOMContentLoaded", function() {
   
     // Start the quiz
     startButton.addEventListener("click", startQuiz);
+    highScores.addEventListener ("click", function(){
+        document.getElementById("scores2").style.display="block";
+        endContainer.style.display="none";
+        questionContainer.style.display="none";
+    });
   
     // Function to start the quiz
     function startQuiz() {
@@ -109,7 +116,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to save the score
     function saveScore(event) {
       event.preventDefault();
-      var initials = initialsInput.value.trim();
+      initials = initialsInput.value.trim();
+      var listelement=document.getElementById("scores1");
+      var li=document.createElement("li");
+      li.appendChild(document.createTextNode(initials+": "+score));
+      listelement.appendChild(li);
       // Save initials and score logic here
     }
   
