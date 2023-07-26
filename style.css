@@ -127,9 +127,10 @@ button:hover {
     padding: 10px 20px;
 }
 
-#scores2{
+#scores2 {
     display: none;
 }
+
 /* body {
   font-family: Arial, sans-serif;
   background-color: #f2f2f2;
