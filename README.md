@@ -27,12 +27,10 @@ When the timer reaches zero or all questions are answered, the quiz ends.
 At the end of the quiz, users can save their initials and score.
 Users can view high scores to compare their progress with others.
 
+![alt text](screenshot.png)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+Deployment Link:
+https://rachelcodes42.github.io/code-quiz/ 
 
 ## Credits
 
