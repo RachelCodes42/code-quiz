@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function startTimer() {
         timerId = setInterval(function () {
             timeLeft--;
-            timerElement.textContent = timeLeft;
+            timerElement.textContent = "Timer: " + timeLeft;
             if (timeLeft <= 0) {
                 clearInterval(timerId);
                 endQuiz();
